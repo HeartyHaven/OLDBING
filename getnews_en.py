@@ -66,7 +66,7 @@ def get_keywords_chi(sentence):
 
 def make_info_chi(question):
   query=get_keywords_chi(question)
-  # print(query)
+  print(query)
   all_articles = newsapi.get_everything(q=query,
                                         sort_by="relevancy",
                                         #采用BBC-NEWS因为它的新闻描述没有截断
@@ -101,7 +101,7 @@ def make_prompt(question,info):
           "Your answer should not have any prefixes such as \"information:\", \"answer:\", \"situation:\" or anything else."\
           "Finally, your answer does not show your reasoning process or that I have provided you with any information. Your answer should contain only your conclusions."\
            +"\nQuestion:"+ "\'\'\'"+question+"\'\'\'"+"\nInformation:"+"\'\'\'"+info+"\'\'\'"
-    # print(prompt)
+    print(prompt)
     return prompt
 # print("input your question:")
 # question=input()

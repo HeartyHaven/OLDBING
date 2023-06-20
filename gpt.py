@@ -3,7 +3,7 @@ import json
 import getnews_en
 import openai
 from transformers import AutoTokenizer, AutoModel
-openai.api_key='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'
+openai.api_key='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'
 import re
 
 def is_chinese_sentence(s):
